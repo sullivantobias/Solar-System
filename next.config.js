@@ -1,6 +1,6 @@
-const basePath = process.env.NODE_ENV === 'production' ? '/solar-system' : '';
+// next.config.js
+const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-    basePath,
-    assetPrefix: `${basePath}/`
-};
+    assetPrefix: isProd ? '/your-github-repo-name/' : ''
+}
