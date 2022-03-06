@@ -1,7 +1,6 @@
 {
-  "name": "nextjs-github-pages",
+  "name": "Solar-System",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "export": "next export",
