@@ -1,6 +1,9 @@
-// next.config.js
-const isProd = process.env.NODE_ENV === 'production'
+const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
-    assetPrefix: isProd ? '/solar-system/' : ''
-}
+  /**
+   * Tell Next.js where the `public` folder is.
+   * Replace `nextjs-github-pages` with your Github repo project name.
+   */
+  assetPrefix: isProd ? "/solar-system/" : "",
+};
