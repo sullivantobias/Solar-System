@@ -1,0 +1,23 @@
+@mixin move-planet() {
+    @-webkit-keyframes move-planet {
+        0%    {background-position: -595px -35px; }
+        100%  {background-position: 5px -35px; }
+    }
+
+    @-moz-keyframes move-planet  {
+        0%    {background-position: -595px -35px; }
+        100%  {background-position: 5px -35px; }
+    }
+
+    @-ms-keyframes move-planet  {
+        0%    {background-position: -595px -35px; }
+        100%  {background-position: 5px -35px; }
+    }
+
+    @keyframes move-planet  {
+        0%    {background-position: -595px -35px; }
+        100%  {background-position: 5px -35px; }
+    }
+
+    animation: move-planet 10s infinite linear;
+}

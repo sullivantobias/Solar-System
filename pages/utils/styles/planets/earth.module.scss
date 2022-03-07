@@ -1,0 +1,9 @@
+@import 'utils/styles/variables';
+
+.Earth {
+    transform: scale(0.1);
+    left: $sun_size + 112px;
+    opacity: 1;
+    background: url('https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg') repeat-x;
+    background-size: 220% 124%;
+}

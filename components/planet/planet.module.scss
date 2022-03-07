@@ -1,0 +1,40 @@
+@import '../utils/styles/mixins/move-planet';
+
+.Planet {
+    position: absolute;
+    cursor: pointer;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform-style: preserve-3d;
+    background-size: auto 100%;
+    box-shadow: inset 0 0 10px rgba(20, 20, 20, 0.7);
+    transition: all 0.5s;
+
+    @include move_planet();
+
+    &:hover {
+        box-shadow: inset 4px -4px 15px 0px #FF1F1F,
+        12px -11px 7px 0px #FF9376,
+        20px -5px 7px 0px #FFE264,
+        20px 6px 7px 0px #F6FF33,
+        13px 12px 17px 0px #FF9527,
+        2px 17px 17px 0px #FF0000,
+        -9px 21px 18px 0px #FFF212,
+        -9px 6px 11px 0px #FF0808,
+        -11px -9px 11px 0px #FFFA17,
+        -11px -9px 11px 0px #FFFA17,
+        5px 5px 15px 5px rgba(0, 0, 0, 0);
+    }
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: radial-gradient(circle at 10% 50%, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.85) 60%);
+        box-shadow: inset -5px 0px 40px #000005;
+    }
+}

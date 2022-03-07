@@ -1,0 +1,13 @@
+.main {
+    display: flex;
+    height: 100vh;
+    background: url('https://www.solarsystemscope.com/textures/download/2k_stars_milky_way.jpg') top center;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: relative;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,7 @@
+@import 'utils/styles/variables';
+
+.Saturn {
+    transform: scale(0.9);
+    left: $sun_size + 1020px;
+    background: url('https://www.solarsystemscope.com/textures/download/2k_saturn.jpg') repeat-x;
+}
