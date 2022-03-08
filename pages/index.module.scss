@@ -1,4 +1,4 @@
-.main {
+.Main {
     display: flex;
     height: 100vh;
     background: url('../public/milky_way_texture.jpg') top center;
@@ -7,7 +7,15 @@
     position: relative;
 }
 
-.content {
+.Content {
     display: flex;
     align-items: center;
+}
+
+.Title {
+    position: fixed;
+    color: white;
+    width: 100%;
+    margin-top: 150px;
+    letter-spacing: 4px;
 }

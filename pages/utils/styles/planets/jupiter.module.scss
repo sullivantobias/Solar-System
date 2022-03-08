@@ -1,7 +1,5 @@
-@import 'utils/styles/variables';
+@import '../../../../utils/styles/mixins/planet';
 
 .Jupiter {
-    left: $sun_size + 500px;
-    transform: scale(1.1);
-    background: url('../../../../public/jupiter_texture.jpg') repeat-x;
+    @include planet(1.1, 500, '../../../public/jupiter_texture.jpg')
 }

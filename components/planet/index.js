@@ -3,11 +3,15 @@ import classNames from "classnames";
 
 import style from './planet.module.scss';
 
-const Planet = ({ planet }) => {
+const Planet = ({ children, planet, onMouseEnter, onMouseLeave }) => {
     return (
-        <div className={classNames(style.Planet, {
+        <div onMouseLeave={() => onMouseLeave('')}
+             onMouseEnter={() => onMouseEnter(planet.name)}
+             className={classNames(style.Planet, {
           [planet.style]: planet
-        })}></div>
+        })}>
+            {children}
+        </div>
     );
 }
 

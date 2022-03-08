@@ -1,9 +1,5 @@
-@import 'utils/styles/variables';
+@import '../../../../utils/styles/mixins/planet';
 
 .Earth {
-    transform: scale(0.1);
-    left: $sun_size + 112px;
-    opacity: 1;
-    background: url('../../../../public/earth_texture.jpg') repeat-x;
-    background-size: 220% 124%;
+    @include planet(0.1, 112, '../../../public/earth_texture.jpg')
 }

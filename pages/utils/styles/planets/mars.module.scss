@@ -1,7 +1,5 @@
-@import 'utils/styles/variables';
+@import '../../../../utils/styles/mixins/planet';
 
 .Mars {
-    transform: scale(0.054);
-    left: $sun_size + 170px;
-    background: url('../../../../public/mars_texture.jpg') repeat-x;
+    @include planet(0.054, 170, '../../../public/mars_texture.jpg')
 }

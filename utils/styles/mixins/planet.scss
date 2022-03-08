@@ -1,0 +1,7 @@
+@import '../variables.scss';
+
+@mixin planet($transform, $left, $url) {
+    transform: scale($transform);
+    left: $sun_size + $left + px;
+    background: url($url) repeat-x;
+}

@@ -1,7 +1,11 @@
 @mixin move-planet() {
     @-webkit-keyframes move-planet {
-        0%    {background-position: -595px -35px; }
-        100%  {background-position: 5px -35px; }
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: -600px;
+        }
     }
 
     @-moz-keyframes move-planet  {
@@ -15,8 +19,12 @@
     }
 
     @keyframes move-planet  {
-        0%    {background-position: -595px -35px; }
-        100%  {background-position: 5px -35px; }
+        0% {
+            background-position-x: 0;
+        }
+        100% {
+            background-position-x: -600px;
+        }
     }
 
     animation: move-planet 10s infinite linear;

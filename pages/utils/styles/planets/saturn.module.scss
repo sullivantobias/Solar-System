@@ -1,7 +1,29 @@
-@import 'utils/styles/variables';
+@import '../../../../utils/styles/mixins/planet';
 
 .Saturn {
-    transform: scale(0.9);
-    left: $sun_size + 1020px;
-    background: url('../../../../public/saturn_texture.jpg') repeat-x;
+    @include planet(0.9, 1020, '../../../public/saturn_texture.jpg')
+}
+
+.Ring{
+    position :absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    left: -150px;
+    top: -150px;
+    transform: rotatex(70deg) rotatey(-10deg);
+    box-shadow: inset 0 0 5px 5px #111,
+    inset 0 0 5px 25px #333,
+    inset 0 0 5px 35px #443,
+    inset 0 0 5px 55px #544,
+    inset 0 0 5px 65px #122,
+    inset 0 0 5px 70px #121113,
+    inset 0 0 5px 85px #22212a,
+    inset 0 0 5px 88px #333,
+    inset 0 0 5px 95px #343,
+    inset 0 0 5px 99px #334,
+    inset 0 0 5px 102px #434,
+    inset 0 0 5px 105px #333,
+    inset 0 0 5px 110px #222,
+    inset 0 0 5px 120px #333;
 }
