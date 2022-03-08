@@ -1,4 +1,4 @@
-@import '../../../../utils/styles/mixins/planet';
+@import '../mixins/planet';
 
 .Venus {
     @include planet(0.09, 75, '../../../public/venus_texture.jpg')

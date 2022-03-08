@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import planets from "./utils/js/planets";
+import planets from "../utils/js/planets";
 
 import Sun from "../components/sun";
 import Planet from "../components/planet";
