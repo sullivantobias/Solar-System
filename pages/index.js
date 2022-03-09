@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import Router, { withRouter } from 'next/router'
+
 import planets from "../utils/js/planets";
 
 import Sun from "../components/sun";
@@ -8,8 +10,13 @@ import Title from "../components/title";
 
 import mainStyle from './index.module.scss';
 
-export default function Home() {
-  const [planetName, setPlanetName] = useState('')
+function Home() {
+  const [planetName, setPlanetName] = useState('');
+
+  const handlePlanetName = name => setPlanetName(name)
+  const handlePlanetClick = name => {
+      Router.push(`planets/${name.toLowerCase()}`)
+  }
 
   return (
       <div className={mainStyle.Main}>
@@ -17,14 +24,17 @@ export default function Home() {
         <div className={mainStyle.Content}>
           <Sun />
           { planets.map((planet, index) =>
-              <Planet onMouseLeave={value => setPlanetName(value)}
-                      onMouseEnter={value => setPlanetName(value)}
+              <Planet onClick={ () => handlePlanetClick(planet.name)}
+                      onMouseLeave={ () => handlePlanetName('') }
+                      onMouseEnter={ () => handlePlanetName(planet.name) }
                       key={ index }
                       planet={ planet }>
-                { planet.children }
+                  { planet.children }
               </Planet>
           ) }
         </div>
       </div>
   );
 }
+
+export default withRouter(Home);

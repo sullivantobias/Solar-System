@@ -1,0 +1,28 @@
+{
+  "planets": [
+    {
+      "id": "mercury"
+    },
+    {
+      "id": "venus"
+    },
+    {
+      "id": "earth"
+    },
+    {
+      "id": "mars"
+    },
+    {
+      "id": "jupiter"
+    },
+    {
+      "id": "saturn"
+    },
+    {
+      "id": "uranus"
+    },
+    {
+      "id": "neptune"
+    }
+  ]
+}
