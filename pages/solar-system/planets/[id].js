@@ -1,4 +1,4 @@
-import { getIds, getInfo } from "../../lib/getInfo";
+import { getIds, getInfo } from "../../../lib/getInfo";
 
 export async function getStaticProps({ params }) {
     const planetData = getInfo(params);

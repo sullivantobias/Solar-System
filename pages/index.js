@@ -15,7 +15,7 @@ function Home() {
 
   const handlePlanetName = name => setPlanetName(name)
   const handlePlanetClick = name => {
-      Router.push(`planets/${name.toLowerCase()}`)
+      Router.push(`solar-system/planets/${name.toLowerCase()}`)
   }
 
   return (
