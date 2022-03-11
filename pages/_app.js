@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }) {
               isBackDisplayed={ isBackDisplayed } />
         <AnimatePresence
             exitBeforeEnter
-            initial={false}
+            initial={ false }
             onExitComplete={() => window.scrollTo(0, 0)}>
             <Component {...pageProps} />;
         </AnimatePresence>

@@ -9,7 +9,7 @@ import style from './header.module.scss';
 const Header = ({ planets, isBackDisplayed }) =>
     <div className={ style.Header }>
         { isBackDisplayed &&
-            <Link href='/solar-system'>
+            <Link href='/'>
                 <a className={ style.Link }> Back </a>
             </Link>
         }

@@ -2,8 +2,9 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
-const Layout = ({ children, delay, className }) =>
+const Layout = ({ children, delay, className, key }) =>
         <motion.div
+            key={ key }
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
             transition={{

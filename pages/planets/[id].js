@@ -54,10 +54,10 @@ export default function PlanetInfo({ planetData }) {
             </Planet>
         </Layout>
         <div className={style.Desc}>
-            <Layout delay={0.1}>
+            <Layout key='title' delay={0.1}>
                 <Title title={name} />
             </Layout>
-            <Layout delay={0.2}>
+            <Layout key='desc' delay={0.2}>
                 <Text>{ desc }</Text>
             </Layout>
         </div>

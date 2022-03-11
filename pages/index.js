@@ -22,7 +22,7 @@ function Home() {
           <Sun />
 
           { planets.map((planet, index) =>
-              <Link key={ index } href={`/solar-system/planets/${planet.name.toLowerCase()}`}>
+              <Link key={ index } href={`/planets/${planet.name.toLowerCase()}`}>
                   <a>
                       <Planet onMouseLeave={ () => handlePlanetName('') }
                               onMouseEnter={ () => handlePlanetName(planet.name) }
