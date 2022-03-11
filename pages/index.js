@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Link from 'next/Link'
+import Link from 'next/link'
 
 import planets from "../utils/js/planets";
 
