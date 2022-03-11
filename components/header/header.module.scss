@@ -1,0 +1,16 @@
+.Header {
+  display: flex;
+  position: fixed;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  overflow: hidden;
+  color: white;
+  z-index: 1;
+}
+
+.Link {
+  flex-basis: 20%;
+  cursor: pointer;
+}
+

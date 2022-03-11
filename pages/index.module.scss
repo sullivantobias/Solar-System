@@ -1,8 +1,6 @@
 .Main {
     display: flex;
     height: 100vh;
-    background: url('../public/milky_way_texture.jpg') top center;
-    overflow-x: scroll;
     overflow-y: hidden;
     position: relative;
 }
@@ -17,5 +15,4 @@
     color: white;
     width: 100%;
     margin-top: 150px;
-    letter-spacing: 4px;
 }

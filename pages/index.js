@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import Router, { withRouter } from 'next/router'
+import Link from 'next/Link'
 
 import planets from "../utils/js/planets";
 
@@ -14,27 +14,27 @@ function Home() {
   const [planetName, setPlanetName] = useState('');
 
   const handlePlanetName = name => setPlanetName(name)
-  const handlePlanetClick = name => {
-      Router.push(`solar-system/planets/${name.toLowerCase()}`)
-  }
 
   return (
       <div className={mainStyle.Main}>
         <Title title={planetName} className={mainStyle.Title}/>
         <div className={mainStyle.Content}>
           <Sun />
+
           { planets.map((planet, index) =>
-              <Planet onClick={ () => handlePlanetClick(planet.name)}
-                      onMouseLeave={ () => handlePlanetName('') }
-                      onMouseEnter={ () => handlePlanetName(planet.name) }
-                      key={ index }
-                      planet={ planet }>
-                  { planet.children }
-              </Planet>
+              <Link key={ index } href={`/solar-system/planets/${planet.name.toLowerCase()}`}>
+                  <a>
+                      <Planet onMouseLeave={ () => handlePlanetName('') }
+                              onMouseEnter={ () => handlePlanetName(planet.name) }
+                              planet={ planet }>
+                          { planet.children }
+                      </Planet>
+                  </a>
+              </Link>
           ) }
         </div>
       </div>
   );
 }
 
-export default withRouter(Home);
+export default Home;
