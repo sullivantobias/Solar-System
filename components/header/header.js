@@ -9,7 +9,7 @@ import Title from "../title";
 import style from './header.module.scss';
 
 const Header = ({ planets, isBackDisplayed, planetId }) => {
-    const root = isBackDisplayed ? 'solar-system/' : 'solar-system/planets/';
+    const root = 'solar-system/planets/';
 
     return <div className={ style.Header }>
         { isBackDisplayed &&
