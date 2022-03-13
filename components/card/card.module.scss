@@ -1,12 +1,21 @@
+@import '../../utils/styles/breakpoints.scss';
+
 .Card {
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1rem 2rem;
-  flex-basis: 23%;
+  margin: 20px 0;
+  flex-basis: 100%;
   color: white;
   border: 1px solid white;
+  min-width: 250px;
+
+  @include medium {
+    margin: 0;
+    flex-basis: 23%;
+  }
 }
 
 .Label {

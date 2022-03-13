@@ -4,7 +4,7 @@ import classNames from "classnames";
 
 import style from './title.module.scss';
 
-const Title = ({ title, tag, className}) => {
+const Title = ({ title, tag, className }) => {
     const CustomTitle = tag ? `h${ tag }` : 'h1';
 
     return (

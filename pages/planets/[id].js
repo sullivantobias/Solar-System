@@ -49,9 +49,7 @@ export default function PlanetInfo({ planetData }) {
 
     return <div className={style.PlanetLayout}>
         <Layout>
-            <Planet addStyle={style.PlanetDetails} planet={currentPlanet}>
-                {currentPlanet.children}
-            </Planet>
+            <Planet addStyle={style.PlanetDetails} planet={currentPlanet} />
         </Layout>
         <div className={style.Desc}>
             <Layout key='title' delay={0.1}>
