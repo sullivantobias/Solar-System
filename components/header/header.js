@@ -10,7 +10,7 @@ import Burger from "../burger";
 import style from './header.module.scss';
 
 const Header = ({ planets, isBackDisplayed, planetId }) => {
-    const root = 'solar-system/planets/';
+    const root = '/solar-system/planets/';
 
     const links = (style, onClick) =>
         planets.map(({ name, id }) =>
