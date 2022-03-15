@@ -2,11 +2,17 @@ import React from 'react'
 
 import { motion } from 'framer-motion'
 
-const Layout = ({ children, delay, className, key }) => {
-    const variants = {
+const Layout = ({ children, delay, className, key, passedVariants, passedTransition }) => {
+    const variants = passedVariants ? passedVariants : {
         hidden: { scale: 0 },
         enter: { scale: 1 },
         exit: { scale: 0 },
+    }
+
+    const transition = passedTransition ? passedTransition : {
+        type: 'spring',
+        stiffness: 120,
+        delay
     }
 
     return <motion.div
@@ -15,7 +21,7 @@ const Layout = ({ children, delay, className, key }) => {
         initial="hidden"
         animate="enter"
         exit="exit"
-        transition={{ type: 'spring', stiffness: 120, delay }}
+        transition={ transition }
         className={ className }
     >
         { children }

@@ -1,19 +1,37 @@
 @import '../../utils/styles/breakpoints.scss';
 
 .Header {
-    display: flex;
     position: fixed;
+    display: flex;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: flex-start;
+    padding: 20px;
     align-items: center;
     overflow: hidden;
     color: white;
     z-index: 1;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+
+    @include medium {
+        position: fixed;
+        justify-content: space-evenly;
+        padding: 0;
+    }
+}
+
+.Fixed {
+    position: fixed;
 }
 
 .Link {
-  flex-basis: 20%;
-  cursor: pointer;
+    display: none;
+
+    @include medium {
+        display: block;
+        flex-basis: 20%;
+        cursor: pointer;
+    }
 }
 
 .Title {
