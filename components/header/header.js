@@ -12,26 +12,27 @@ import style from './header.module.scss';
 const Header = ({ planets, isBackDisplayed, planetId }) => {
     const root = '/solar-system/planets/';
 
-    const links = (style, onClick) =>
+    const links = (style, tag = 6, onClick) =>
         planets.map(({ name, id }) =>
             <Link href={`${root}${name.toLowerCase()}`}>
                 <a className={
                     classNames(style.Title, { [style.isCurrent]: id === planetId }) }
                     onClick={ onClick }>
-                    <Title tag={ 6 } title={ name } />
+                    <Title tag={ tag } title={ name } />
                 </a>
              </Link>
         )
 
+    const backButton = () => isBackDisplayed &&
+        <Link href='/solar-system'>
+            <a className={ style.Link }> &#8592; </a>
+        </Link>
+
     return <div className={ classNames( style.Header, {
         [style.Fixed]: !isBackDisplayed
     })}>
+        { backButton() }
         <Burger links={ links } />
-        { isBackDisplayed &&
-            <Link href='/solar-system'>
-                <a className={ style.Link }> Back </a>
-            </Link>
-        }
         { links(style) }
     </div>
 }

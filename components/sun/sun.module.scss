@@ -7,6 +7,6 @@
     transform: scale(10.1);
     left: -4 * $sun_size + px;
     border-radius: 50%;
-    background: #eb1;
-    box-shadow: 0 0 30px #eb1, 0 0 4 * $sun_size+px rgba(250, 200, 10, 0.4);
+    background: $sun_background;
+    box-shadow: 0 0 30px #eb1, 0 0 4 * $sun_size + px $sun_box-shadows;
 }

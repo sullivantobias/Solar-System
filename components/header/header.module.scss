@@ -1,4 +1,5 @@
 @import '../../utils/styles/breakpoints.scss';
+@import '../../utils/styles/variables.scss';
 
 .Header {
     position: fixed;
@@ -8,10 +9,10 @@
     padding: 20px;
     align-items: center;
     overflow: hidden;
-    color: white;
+    color: $white;
     z-index: 1;
-    background-color: rgba(0, 0, 0, 0.8);
     top: 0;
+    background-color: $header-background;
 
     @include medium {
         position: fixed;
@@ -25,13 +26,10 @@
 }
 
 .Link {
-    display: none;
-
-    @include medium {
         display: block;
         flex-basis: 20%;
         cursor: pointer;
-    }
+        font-size: 25px;
 }
 
 .Title {
@@ -40,7 +38,7 @@
   transition: color 0.1s ease-in-out;
 
   &:hover {
-    color: #ffc107;
+    color: $current;
   }
 
   @include medium {
@@ -49,7 +47,7 @@
 }
 
 .isCurrent {
-  color: #ffc107;
+  color: $current;
   pointer-events: none;
 }
 

@@ -29,7 +29,7 @@ const Burger = ( { links }) => {
         { open &&
             <Layout className={ style.Menu }passedTransition={ transitions }
                     passedVariants={ variants }>
-                { links(style, handleClick) }
+                { links(style, 4, handleClick) }
             </Layout>
         }
     </div>

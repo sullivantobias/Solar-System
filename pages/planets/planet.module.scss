@@ -1,4 +1,5 @@
 @import '../../utils/styles/breakpoints.scss';
+@import '../../utils/styles/variables.scss';
 
 .PlanetLayout {
     display: flex;
@@ -22,7 +23,7 @@
     justify-content: center;
     padding: 2vw;
     flex-basis: 100%;
-    color: white;
+    color: $white;
 
     @include medium {
         justify-content: start;
@@ -53,5 +54,47 @@
     &:before {
         background: none;
     }
+}
+
+.Tabs {
+    display: flex;
+    justify-content: space-evenly;
+    flex-basis: 100%;
+    margin: 50px 0;
+}
+
+.Tab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    outline: none;
+    border: 1px solid $white;
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+
+    transition: all 0.3s ease-in-out;
+
+
+    @include medium {
+        padding: 20px;
+    }
+
+    &:hover {
+        background: $current;
+        color: $black;
+    }
+}
+
+.isCurrent {
+    background: $current;
+    color: $black;
 }
 

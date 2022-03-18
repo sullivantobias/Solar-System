@@ -1,3 +1,5 @@
+@import '../utils/styles/variables.scss';
+
 .Main {
     display: flex;
     height: 100vh;
@@ -12,7 +14,7 @@
 
 .Title {
     position: fixed;
-    color: white;
+    color: $white;
     width: 100%;
     margin-top: 150px;
 }

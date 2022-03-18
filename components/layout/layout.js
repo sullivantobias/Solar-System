@@ -12,6 +12,7 @@ const Layout = ({ children, delay, className, key, passedVariants, passedTransit
     const transition = passedTransition ? passedTransition : {
         type: 'spring',
         stiffness: 120,
+        damping: 10,
         delay
     }
 

@@ -1,3 +1,6 @@
+import { useState } from "react";
+import classNames from "classnames";
+
 import { getIds, getInfo } from "../../lib/getInfo";
 
 import planets from "../../utils/js/planets";
@@ -30,10 +33,11 @@ export async function getStaticPaths() {
 }
 
 export default function PlanetInfo({ planetData }) {
+    const [ descId, setDescId ] = useState('overview');
+
     const currentPlanet = planets.find(planet => planet.id === planetData.id);
     const {
         name,
-        desc,
         rotation,
         radius,
         average_temperature,
@@ -47,7 +51,31 @@ export default function PlanetInfo({ planetData }) {
         { 'AVERAGE TEMP': `${average_temperature} °C` }
     ];
 
+    const tabs = [
+        {
+            title: 'Overview',
+            id: 'overview',
+        },
+        {
+            title: 'Internal',
+            id: 'internal',
+        },
+        {
+            title: 'Surface',
+            id: 'surface',
+        },
+    ];
+
+    const desc = planetData[descId];
+
     return <div className={style.PlanetLayout}>
+        <Layout className={style.Tabs}>
+            { tabs.map(({ title, id }, index) =>
+                <button onClick={() => setDescId(id)} key={index} className={classNames(style.Tab, {
+                    [style.isCurrent]: descId === id
+                })}>{title}</button>
+            ) }
+        </Layout>
         <Layout>
             <Planet addStyle={style.PlanetDetails} planet={currentPlanet} />
         </Layout>
@@ -55,7 +83,7 @@ export default function PlanetInfo({ planetData }) {
             <Layout key='title' delay={0.1}>
                 <Title title={name} />
             </Layout>
-            <Layout key='desc' delay={0.2}>
+            <Layout key='desc' delay={ 0.2 }>
                 <Text>{ desc }</Text>
             </Layout>
         </div>

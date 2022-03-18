@@ -1,4 +1,5 @@
 @import '../../utils/styles/breakpoints.scss';
+@import '../../utils/styles/variables.scss';
 
 .Container {
   display: flex;
@@ -25,7 +26,7 @@
     left: 50%;
     width: 26px;
     height: 2px;
-    background-color: white;
+    background-color: $white;
 
     &:nth-child(1) {
       top: 0;
@@ -81,6 +82,6 @@
 }
 
 .isCurrent {
-  color: #ffc107;
+  color: $current;
   pointer-events: none;
 }
